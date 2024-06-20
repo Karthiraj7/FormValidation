@@ -55,6 +55,7 @@ Summary
 In this SPFx React project, the ContentTab, EditContainer, and ViewContainer components are used to create a seamless experience for form data entry, validation, and approval processing. By leveraging PnP.js, the application can efficiently interact with SharePoint lists to manage form data and approval workflows. Form validation ensures data integrity, while the approval levels implemented via SharePoint lists enable structured and trackable approval processes.
 
 
+![Screenshot 2024-06-20 145445](https://github.com/Karthiraj7/FormValidation/assets/108760004/24261f29-923d-488c-b45e-ab36718e8547)
 
 
 
