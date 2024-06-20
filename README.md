@@ -1,10 +1,65 @@
-# share-point
+#spfx
 
 ## Summary
 
-Short summary on functionality and used technologies.
+Overview
+1. Project Components
+ContentTab: Manages the display and navigation of various content tabs within the application.
+EditContainer: Handles the editing of form data, including form validation.
+ViewContainer: Displays the content in a view-only mode and manages approval processes.
+Form Validation using PnP (Patterns and Practices)
+PnP.js Overview
+PnP.js is a reusable library that simplifies SharePoint REST API calls. It can be used to interact with SharePoint lists, libraries, and other SharePoint entities.
 
-[picture of the solution in action, if possible]
+Form Validation Steps
+Form Design: Create the form structure within the EditContainer component using React.
+
+Input Handling: Use React state to manage form input values and changes.
+
+Validation Rules: Implement validation rules (e.g., required fields, data formats) using functions or a validation library.
+
+PnP.js Integration:
+
+Use PnP.js to fetch necessary data (like dropdown options) and submit form data to the SharePoint list.
+Example: import { sp } from "@pnp/sp";
+Error Handling: Display validation errors dynamically as users interact with the form.
+
+Approval Levels Using SharePoint List
+Approval Process Overview
+An approval process typically involves multiple stages where each stage requires a designated person or group to approve or reject the item.
+
+Steps to Implement Approval Levels
+SharePoint List Setup:
+
+Create a SharePoint list to store form data and approval status.
+Add columns such as Status, Approver, Comments, and Approval Level.
+EditContainer:
+
+On form submission, save the form data to the SharePoint list with an initial status (e.g., "Pending").
+Use PnP.js to submit and update list items.
+ViewContainer:
+
+Display the form data along with current approval status.
+Provide an interface for approvers to approve/reject and add comments.
+Update the status in the SharePoint list based on approver's action using PnP.js.
+ContentTab:
+
+Navigate between different stages of content or different approval levels.
+Display relevant data and actions based on the user's role (e.g., viewer, editor, approver).
+Approval Workflow:
+
+Define the logic to move items through various approval levels.
+Update the item in the SharePoint list after each approval stage.
+Send notifications to next approver using Power Automate or custom code if necessary.
+Summary
+In this SPFx React project, the ContentTab, EditContainer, and ViewContainer components are used to create a seamless experience for form data entry, validation, and approval processing. By leveraging PnP.js, the application can efficiently interact with SharePoint lists to manage form data and approval workflows. Form validation ensures data integrity, while the approval levels implemented via SharePoint lists enable structured and trackable approval processes.
+
+
+
+
+
+
+
 
 ## Used SharePoint Framework Version
 
